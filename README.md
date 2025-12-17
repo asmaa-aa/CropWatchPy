@@ -118,7 +118,7 @@ python src/main.py
 ### 3. Data Output
 In addition to the database, the full processed dataset is automatically exported to CSV for use in external tools (Excel, R, etc.):
 * Location: `data/ndvi_full.csv`
-* 
+  
 ##  Testing
 
 This project adheres to Test-Driven Development (TDD) principles. The test suite includes unit tests for the database manager, mathematical analysis logic, and data preprocessing.
