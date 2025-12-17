@@ -104,3 +104,27 @@ To run CropWatchPy on your local machine, follow these steps.
 Execute the main script from the project root directory:
 ```bash
 python src/main.py
+```
+
+### 2. Workflow
+1.  **Load Data:** Click the **"Add NDVI Files"** button and select your satellite `.tif` images.
+2.  **Analyze:** Click **"Run Analysis"**. The system will:
+    * Clean the data (remove errors/clouds).
+    * Compute statistical anomalies (Z-score > 1.5).
+    * Save results to the local SQLite database (`cropwatch.db`).
+3.  **Visualize:**
+    * **View Trends:** Generates a line chart of vegetation health over time.
+    * **Launch Dashboard:** Opens an interactive map to inspect specific anomaly locations.
+### 3. Data Output
+In addition to the database, the full processed dataset is automatically exported to CSV for use in external tools (Excel, R, etc.):
+* Location: `data/ndvi_full.csv`
+* 
+##  Testing
+
+This project adheres to Test-Driven Development (TDD) principles. The test suite includes unit tests for the database manager, mathematical analysis logic, and data preprocessing.
+
+To run the full test suite, use `pytest`:
+
+```bash
+pytest tests
+```
