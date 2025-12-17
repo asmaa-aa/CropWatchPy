@@ -1,0 +1,11 @@
+numpy
+pandas
+csv
+xarray
+rasterio
+matplotlib
+plotly
+tk
+sqlite3
+pytest
+
